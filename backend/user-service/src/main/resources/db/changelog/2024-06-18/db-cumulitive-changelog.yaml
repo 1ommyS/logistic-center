@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ivanberezuckij
+      changes:
+        - sqlFile:
+            path: db/changelog/2024-06-18/add-role-column-to-user.sql

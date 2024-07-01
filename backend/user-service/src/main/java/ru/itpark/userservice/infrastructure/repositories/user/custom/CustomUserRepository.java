@@ -40,10 +40,10 @@ public class CustomUserRepository {
             predicates.add(cb.equal(root.get("languages"), searchParams.getLanguages()));
         }
 
-        if (searchParams.getDateInfo().getCreatedAt() != null) {
+        if (searchParams.getDateInfo() != null && searchParams.getDateInfo().getCreatedAt() != null) {
             predicates.add(cb.equal(root.get("createdAt"), searchParams.getDateInfo().getCreatedAt()));
         }
-        if (searchParams.getDateInfo().getDeletedAt() != null) {
+        if (searchParams.getDateInfo() != null && searchParams.getDateInfo().getDeletedAt() != null) {
             predicates.add(cb.equal(root.get("deletedAt"), searchParams.getDateInfo().getDeletedAt()));
         }
 

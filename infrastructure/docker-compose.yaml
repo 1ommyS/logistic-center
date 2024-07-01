@@ -2,3 +2,4 @@ version: '3.8'
 
 include:
   - path: './db/docker-compose.yaml'
+  - path: './kafka/docker-compose.yaml'

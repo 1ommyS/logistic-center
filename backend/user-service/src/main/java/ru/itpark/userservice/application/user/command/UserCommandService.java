@@ -25,6 +25,14 @@ public class UserCommandService {
                 fillUserDataCommand.languages()
         );
 
-        userRepository.save(user);
+        userRepository.saveUser(
+                user.getFullName(),
+                user.getEmail(),
+                user.getLogin(),
+                languageConverter.convertToDatabaseColumn(user.getLanguages()),
+                user.getRole().toString(),
+                user.getDateInfo().getCreatedAt(),
+                user.getDateInfo().getDeletedAt()
+        );
     }
 }
